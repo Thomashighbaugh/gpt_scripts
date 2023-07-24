@@ -15,3 +15,19 @@ These scripts look for an environmental variable called `OPENAI_API_KEY` thus on
 | image_prompt_generator.py | Provided a topic, it generates a Stable Diffusion prompt                                                                         |
 | therapist.py              | Using conversation history for context, this provides therapist like interaction from GPT-3                                      |
 | tutorial_writer.py        | Writes a tutorial on a given technical topic                                                                                     |
+
+## Bootstrapping Your Environment
+
+To ease the usage of the correct dependencies and streamline the creation of an isolated virtual environment, a bash script is included that will (on Linux at the very least) automatically do everything necessary except the exporting of your API key.
+
+To run the script, enter the following command in your terminal after navigating to the location you've downloaded this repository to:
+
+```bash
+bash start.sh
+```
+
+This will take care of the following prerequisite steps:
+
+- setting up virtual environment with `python -m venv`
+- sourcing the virtual environment
+- installing the dependencies listed in `requirements.txt`
