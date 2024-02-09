@@ -1,6 +1,6 @@
 # GPT Scripts
 
-This repository contains GPT-3 scripts that utilize various prompts to provide specific interaction patterns with GPT-3 from your local terminal (command line).
+This repository contains GPT-3-Turbo scripts that utilize various prompts to provide specific interaction patterns with GPT-3 from your local terminal (command line).
 
 ## Rebased Using GPT4Free
 
@@ -15,8 +15,10 @@ With GPT4Free, I am not able to return to working with AI using Python scripts i
 | Script                    | Functionality Provided                                                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | chatbot.py                | a basic chatbot provided with the conversation's history for additional context                                                  |
+| coverletter.py | takes a job description and your resume then outputs a coverletter |
 | gpt_prompt_generator.py   | Provided a topic, it generates a better prompt for GPT based models with additional questions to help further improve the prompt |
 | image_prompt_generator.py | Provided a topic, it generates a Stable Diffusion prompt                                                                         |
+| improve_code.py | provided a path, it will optimize python code and save it(warning: destructive) | 
 | therapist.py              | Using conversation history for context, this provides therapist like interaction from GPT-3                                      |
 | tutorial_writer.py        | Writes a tutorial on a given technical topic                                                                                     |
 
