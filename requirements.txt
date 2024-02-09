@@ -2,3 +2,7 @@ pandas
 g4f
 openai>=0.28.0, <1.0.0
 numpy
+brotli 
+brotlipy
+brotlicffi
+
