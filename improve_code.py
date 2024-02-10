@@ -1,4 +1,3 @@
-
 import sys, re
 from pathlib import Path
 from os import path
@@ -7,10 +6,12 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 
 import g4f
 
+
 def read_code(text):
     if match := re.search(r"```(python|py|)\n(?P<code>[\S\s]+?)\n```", text):
         return match.group("code")
-    
+
+
 path = input("Path: ")
 
 with open(path, "r") as file:
@@ -21,10 +22,13 @@ Improve the code in this file:
 ```py
 {code}
 ```
-Don't remove anything.
-Add typehints if possible.
-Don't add any typehints to kwargs.
-Don't remove license comments.
+Rules to Strictly Apply In Formulating Your Completion:
+- Don't remove anything, comment it out instead.
+- Comment the file as completely as possible to aid in human readability.
+- Add your explanations for changes at the top of the file in a comment.
+- Add typehints if possible.
+- Don't add any typehints to kwargs.
+- Don't remove license comments.
 """
 
 print("Create code...")
@@ -33,7 +37,7 @@ for chunk in g4f.ChatCompletion.create(
     model=g4f.models.gpt_35_long,
     messages=[{"role": "user", "content": prompt}],
     timeout=300,
-    stream=True
+    stream=True,
 ):
     response.append(chunk)
     print(chunk, end="", flush=True)

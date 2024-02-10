@@ -6,3 +6,4 @@ brotli
 brotlipy
 brotlicffi
 
+requests

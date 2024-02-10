@@ -13,7 +13,7 @@ def get_response(conversation_history: str, user_input: str) -> str:
     ).replace("<user input>", user_input)
 
     response = g4f.ChatCompletion.create(
-        model=g4f.models.gpt_4,
+        model="gpt-4",
         messages=[{"role": "user", "content": therapist_prompt}],
     )
 
@@ -35,5 +35,5 @@ def main() -> None:
         conversation_history += f"User: {user_input}\nTherapist: {chatbot_response}\n"
 
 
-main()
-
+if __name__ == "__main__":
+    main()
