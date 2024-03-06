@@ -14,30 +14,17 @@ With GPT4Free, I am not able to return to working with AI using Python scripts i
 
 | Script                    | Functionality Provided                                                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| bash_oneliner             | outputs a bash one-liner to achieve a specific task, great for git and ffmpeg commands                                           |
+| blog_article              | writes an informative blog article on a provided topic                                                                           |
 | chatbot.py                | a basic chatbot provided with the conversation's history for additional context                                                  |
-| coverletter.py | takes a job description and your resume then outputs a coverletter |
+| coverletter.py            | takes a job description and your resume then outputs a coverletter                                                               |
+| g4f_check                 | outputs gpt4free models and provider status                                                                                      |
 | gpt_prompt_generator.py   | Provided a topic, it generates a better prompt for GPT based models with additional questions to help further improve the prompt |
 | image_prompt_generator.py | Provided a topic, it generates a Stable Diffusion prompt                                                                         |
-| improve_code.py | provided a path, it will optimize python code and save it(warning: destructive) | 
+| improve_code.py           | provided a path, it will optimize python code and save it(warning: destructive)                                                  |
 | therapist.py              | Using conversation history for context, this provides therapist like interaction from GPT-3                                      |
 | tutorial_writer.py        | Writes a tutorial on a given technical topic                                                                                     |
 
 ## Bootstrapping Your Environment
 
-To ease the usage of the correct dependencies and streamline the creation of an isolated virtual environment, a bash script is included that will (on Linux at the very least) automatically do everything necessary except the exporting of your API key.
-
-To run the script, enter the following command in your terminal after navigating to the location you've downloaded this repository to:
-
-```bash
-./bin/start.sh
-# or
-bash bin/start.bash
-# or
-zsh bin/start.zsh
-```
-
-This will take care of the following prerequisite steps:
-
-- setting up virtual environment with `python -m venv`
-- sourcing the virtual environment
-- installing the dependencies listed in `requirements.txt`
+[Bootstrapping Documentation](/docs/bootstrap.md)
