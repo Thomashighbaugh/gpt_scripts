@@ -21,7 +21,8 @@ With GPT4Free, I am not able to return to working with AI using Python scripts i
 | g4f_check                 | outputs gpt4free models and provider status                                                                                      |
 | gpt_prompt_generator.py   | Provided a topic, it generates a better prompt for GPT based models with additional questions to help further improve the prompt |
 | image_prompt_generator.py | Provided a topic, it generates a Stable Diffusion prompt                                                                         |
-| improve_code.py           | provided a path, it will optimize python code and save it(warning: destructive)                                                  |
+| improve_awesomewm_code.py | improves and refactors awesome window manager code destructively                                                                 |
+| improve_python_code.py    | provided a path, it will optimize python code and save it(warning: destructive)                                                  |
 | therapist.py              | Using conversation history for context, this provides therapist like interaction from GPT-3                                      |
 | tutorial_writer.py        | Writes a tutorial on a given technical topic                                                                                     |
 
