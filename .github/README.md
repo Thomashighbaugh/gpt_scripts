@@ -12,19 +12,38 @@ With GPT4Free, I am not able to return to working with AI using Python scripts i
 
 ## Scripts Available
 
-| Script                    | Functionality Provided                                                                                                           |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| bash_oneliner             | outputs a bash one-liner to achieve a specific task, great for git and ffmpeg commands                                           |
-| blog_article              | writes an informative blog article on a provided topic                                                                           |
-| chatbot.py                | a basic chatbot provided with the conversation's history for additional context                                                  |
-| coverletter.py            | takes a job description and your resume then outputs a coverletter                                                               |
-| g4f_check                 | outputs gpt4free models and provider status                                                                                      |
-| gpt_prompt_generator.py   | Provided a topic, it generates a better prompt for GPT based models with additional questions to help further improve the prompt |
-| image_prompt_generator.py | Provided a topic, it generates a Stable Diffusion prompt                                                                         |
-| improve_awesomewm_code.py | improves and refactors awesome window manager code destructively                                                                 |
-| improve_python_code.py    | provided a path, it will optimize python code and save it(warning: destructive)                                                  |
-| therapist.py              | Using conversation history for context, this provides therapist like interaction from GPT-3                                      |
-| tutorial_writer.py        | Writes a tutorial on a given technical topic                                                                                     |
+### Categories
+
+Scripts are broken up into functional categories, based on what the script is used to ease the process of. Those cateogories are:
+
+| Category    | Description                                               |
+| ----------- | --------------------------------------------------------- |
+| coding      | Scripts that write or rewrite or otherwise deal with code |
+| job_seeking | Scripts that help with finding work                       |
+| misc        | Scripts that don't fit into any other category            |
+| prompting   | scripts to generate or otherwise manipulate prompts       |
+| writing     | Scripts that help with content creation                   |
+
+### Scripts List
+
+| Scripts                | Category                 | Description                                               |
+| ---------------------- | ------------------------ | --------------------------------------------------------- |
+| bash_oneliner          | coding                   | get a bash oneliner for specific complex BASH syntax life |
+| improve_awesomewm_code | coding                   | for documenting awesome code with ldoc and improving it   |
+| improve_python_code    | coding                   | for improving python code, especially these scripts       |
+| -----------            | ----------------------   |
+| coverletter            | job_seeking              | generate a cover letter for a job application             |
+| -------------          | ---------------          |
+| therapist              | misc                     | talk to a therapist                                       |
+| ------------           | ------------------------ |
+| chatbot                | prompting                | chat with a chatbot                                       |
+| g4f_check              | prompting                | determine models and providers available                  |
+| image_prompt_generator | prompting                | generate an image prompt for stable diffusion             |
+| prompt_generator       | prompting                | generate a prompt for any model                           |
+| ---------------        | -------------            |
+| blog_article           | writing                  | generate a blog article                                   |
+| linkedin_post          | writing                  | generate a linkedin post                                  |
+| tutorial_writer        | writing                  | generate a tutorial                                       |
 
 ## Bootstrapping Your Environment
 
