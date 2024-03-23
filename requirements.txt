@@ -1,3 +1,4 @@
+claude-api-py
 PyExecJS
 aiohttp
 aiohttp_socks

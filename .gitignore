@@ -1,3 +1,6 @@
 .venv
+.venv/*
 cover_letter.txt
 linkedin_article.txt
+usercookies/*
+usercookies

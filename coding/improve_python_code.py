@@ -34,7 +34,7 @@ Rules to Strictly Apply In Formulating Your Completion:
 print("Create code...")
 response = []
 for chunk in g4f.ChatCompletion.create(
-    model=g4f.models.gpt_35_long,
+    model=g4f.models.gpt_4_turbo,
     messages=[{"role": "user", "content": prompt}],
     timeout=300,
     stream=True,
