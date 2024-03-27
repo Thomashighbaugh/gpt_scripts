@@ -31,17 +31,14 @@ with open(path, "r") as file:
 
 # Construct the prompt message with rules for improving the code
 prompt = f"""
-Improve the code in this file:
+Annotate the code in this file:
 ```py
 {code}
 ```
 Rules to Strictly Apply In Formulating Your Completion:
-- Don't remove anything, comment it out instead.
 - Comment the file as completely as possible to aid in human readability.
-- Add your explanations for changes at the top of the file in a comment.
-- Add typehints if possible.
-- Don't add any typehints to kwargs.
-- Don't remove license comments.
+- Never trunicate or otherwise remove any aspect of any code for brevity or any other purpose. 
+- Add docstrings to all functions and classes.
 """
 
 print("Create code...")
