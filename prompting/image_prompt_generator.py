@@ -39,7 +39,7 @@ def get_response(conversation_history: str, user_input: str) -> str:
 
     # Get the response from GPT-3
     response = g4f.ChatCompletion.create(
-        model="gpt-3.5-long",
+        model="mixtral-8x7b",
         messages=[{"role": "user", "content": prompt}],
     )
 

@@ -8,6 +8,7 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 
 import g4f  # Importing a custom module, assumed to be in the grandparent directory
 
+
 def read_code(text: str) -> str:
     """
     Extracts and returns the Python code block from the provided text.
@@ -21,6 +22,7 @@ def read_code(text: str) -> str:
     # Use regular expression to find a code block wrapped in triple backticks
     if match := re.search(r"```(python|py|)\n(?P<code>[\S\s]+?)\n```", text):
         return match.group("code")  # Return the matched code block
+
 
 # Prompt the user for the path to the file containing the code to be improved
 path = input("Path: ")
@@ -36,9 +38,9 @@ Annotate the code in this file:
 {code}
 ```
 Rules to Strictly Apply In Formulating Your Completion:
-- Comment the file as completely as possible to aid in human readability.
-- Never trunicate or otherwise remove any aspect of any code for brevity or any other purpose. 
-- Add docstrings to all functions and classes.
+- Comment each part of the code thoroughly.
+- Do not omit any code for the sake of brevity.
+- Include docstrings for all functions and classes, following the Google style guide for Python docstrings."
 """
 
 print("Create code...")

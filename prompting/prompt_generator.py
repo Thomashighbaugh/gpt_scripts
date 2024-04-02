@@ -1,54 +1,63 @@
-# Improved code with the following changes:
-# - Added comments to enhance readability and understanding of the code
-# - Encapsulated user input and conversation logic into a separate function for better organization
-# - Removed unnecessary imports and unused variables
-# - Added type hints for function parameters and return values
-
-from typing import List
 import g4f
 
-# Set the engine name
-engine_name: str = "gpt-3.5-turbo"
 
-def get_user_input() -> None:
-    try:
-        options: List[str] = [
-            "Simulate an expert",
-            "Challenge the conventional narrative",
-            "Write in different styles or tones, such as satire or irony",
+def generate_optimize_prompt(user_query, outcome, model, context):
+    # Create a conversation history string
+    conversation_history = "\n".join(
+        [
+            "Act as though you are a very experienced veteran of prompt engineering. You have a deep understanding of exactly what makes a strong, engaging, and effective prompt to query AI models for the perfect completions every time.",
+            "Input:",
+            f"User's desired prompt: {user_query}",
+            f"Desired outcome: {outcome} ",
+            f"Target AI model: {model}",
+            f"Additional information: {context}",
+            "Instructions:",
+            "Based on the provided information, generate an optimized prompt that is tailored to the target AI model and maximizes the chances of achieving the desired outcome. Consider the following factors:",
+            "Clarity and conciseness: Ensure the prompt is clear, concise, and free of ambiguity.",
+            "Relevance: Make sure the prompt is relevant to the capabilities of the target AI model.",
+            "Specificity: Include specific details and instructions to guide the AI towards the desired outcome.",
+            "Context: Provide relevant context to help the AI understand the user's intent.",
+            "Style and tone: Adjust the style and tone of the prompt to match the desired output.",
+            "Output:",
+            "The optimized prompt, ready to be used with the target AI model.",
         ]
-        print("Please choose an option:")
-        for i, option in enumerate(options, 1):
-            print(f"{i}. {option}")
+    )
 
-        choice: int = int(input("Enter the option number: "))
-        while choice not in range(1, len(options) + 1):
-            choice = int(input("Invalid choice. Enter a valid option number: "))
+    # Get the response from the model
+    response = get_response(conversation_history)
 
-        if choice == 1:
-            desired_prompt: str = input("Enter the prompt: ")
-            roles: List[str] = ["a teacher", "a scientist", "Enter your own role"]
-            print("Choose a role:")
-            for i, role in enumerate(roles, 1):
-                print(f"{i}. {role}")
+    return response
 
-            role_choice: int = int(input("Enter the role number: "))
-            while role_choice not in range(1, len(roles) + 1):
-                role_choice = int(input("Invalid choice. Enter a valid role number: "))
 
-            role: str = (
-                roles[role_choice - 1]
-                if role_choice != len(roles)
-                else input("Enter the role: ")
-            )
-            additional_info: str = input("Any additional information or context? ")
-            user_message: str = desired_prompt + ". " + additional_info + "."
+def get_response(conversation_history: str) -> str:
+    api_instance = g4f.ChatCompletion()
+    try:
+        # Call the API with the specified parameters
+        response = api_instance.create(
+            model="gpt-4-turbo",
+            messages=[{"role": "system", "content": conversation_history}],
+        )
 
-        # Rest of the code remains unchanged
+        # Return the generated response
+        return response
+    except g4f.ApiException as e:
+        print("An error occurred: {}".format(e))
+        return ""
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        traceback.print_exc()
 
-# Call the get_user_input function
-get_user_input()
+def main() -> None:
+    print("What prompt would you like me to make?")
+    user_query = input(">>> ")
+    print("What is the desired outcome of using this prompt?")
+    outcome = input(">>> ")
+    print("What AI model will you be using?")
+    model = input(">>> ")
+    print("Is there any additional context or information you would like to provide?")
+    context = input(">>> ")
+    optimize_prompt = generate_optimize_prompt(user_query, outcome, model, context)
+    print("Your optimized prompt is:")
+    print(optimize_prompt)
+
+
+if __name__ == "__main__":
+    main()
