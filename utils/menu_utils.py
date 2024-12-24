@@ -1,5 +1,4 @@
 # utils/menu_utils.py
-# llm_tui/utils/menu_utils.py
 
 def display_menu(options):
     for i, option in enumerate(options):

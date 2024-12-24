@@ -1,5 +1,4 @@
 # writing/twitter_post_about_article.py
-# llm_tui/writing/twitter_post_about_article.py
 from utils.ollama_utils import query_ollama
 from utils.menu_utils import get_user_input
 from utils.display_utils import display_output

@@ -1,5 +1,4 @@
 # coding/code_explanation.py
-# llm_tui/coding/code_explanation.py
 from utils.ollama_utils import query_ollama
 from utils.menu_utils import get_user_input
 from utils.display_utils import display_output

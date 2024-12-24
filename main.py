@@ -1,5 +1,4 @@
 # main.py
-# llm_tui/main.py
 import sys
 
 from utils.ollama_utils import get_available_models

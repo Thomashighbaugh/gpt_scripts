@@ -1,5 +1,4 @@
 # utils/display_utils.py
-# llm_tui/utils/display_utils.py
 import os
 
 def display_output(output, save_path=None):

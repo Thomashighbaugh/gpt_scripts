@@ -1,5 +1,4 @@
 # utils/ollama_utils.py
-# llm_tui/utils/ollama_utils.py
 import subprocess
 import json
 import requests

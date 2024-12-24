@@ -1,5 +1,4 @@
 # coding/bash_one_liner_generation.py
-# llm_tui/coding/bash_one_liner_generation.py
 from utils.display_utils import display_output
 from utils.menu_utils import get_user_input
 from utils.ollama_utils import query_ollama
