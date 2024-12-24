@@ -1,6 +1,9 @@
 .venv
 .venv/*
-cover_letter.txt
-linkedin_article.txt
+*.txt
 usercookies/*
 usercookies
+**/__pycache__
+**/*.pyc
+**/__pycache__/*
+.quicknote/
